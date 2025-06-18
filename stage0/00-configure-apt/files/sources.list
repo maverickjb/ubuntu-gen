@@ -1,0 +1,8 @@
+deb URL RELEASE main restricted universe multiverse
+deb-src URL RELEASE main restricted universe multiverse
+
+deb URL RELEASE-security main restricted universe multiverse
+deb-src URL RELEASE-security main restricted universe multiverse
+
+deb URL RELEASE-updates main restricted universe multiverse
+deb-src URL RELEASE-updates main restricted universe
