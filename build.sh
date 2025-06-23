@@ -129,9 +129,6 @@ export LOG_FILE="${WORK_DIR}/build.log"
 
 export TARGET_HOSTNAME=${TARGET_HOSTNAME:-ubuntu-nabu}
 
-export FIRST_USER_NAME=${FIRST_USER_NAME:-ubuntu}
-export FIRST_USER_PASS
-
 export LOCALE_DEFAULT="${LOCALE_DEFAULT:-en_GB.UTF-8}"
 
 export CLEAN
@@ -157,18 +154,6 @@ if ! arch-test -n "$ARCH"; then
 		echo "No fallback mechanism found. Ensure your OS has binfmt_misc support enabled and configured."
 		exit 1
 	fi
-fi
-
-#check username is valid
-if [[ ! "$FIRST_USER_NAME" =~ ^[a-z][-a-z0-9_]*$ ]]; then
-	echo "Invalid FIRST_USER_NAME: $FIRST_USER_NAME"
-	exit 1
-fi
-
-if [[ "$DISABLE_FIRST_BOOT_USER_RENAME" == "1" ]] && [ -z "${FIRST_USER_PASS}" ]; then
-	echo "To disable user rename on first boot, FIRST_USER_PASS needs to be set"
-	echo "Not setting FIRST_USER_PASS makes your system vulnerable and open to cyberattacks"
-	exit 1
 fi
 
 log "Begin ${BASE_DIR}"
