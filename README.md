@@ -8,17 +8,6 @@ This repository is based on **pi-gen**, the Raspberry Pi image building scripts.
 
 ## How to Use
 
-### Copy `.deb` Files
-
-Copy the Nabu `.deb` files to `stage0/05-firmware/files/`.
- You can download or build them from: [map220v/ubuntu-xiaomi-nabu](https://github.com/map220v/ubuntu-xiaomi-nabu)
-
-```
-cd ubuntu-gen
-cp /your/path/to/debs/firmware-xiaomi-nabu.deb stage0/05-firmware/files/
-cp /your/path/to/debs/linux-xiaomi-nabu.deb stage0/05-firmware/files/
-```
-
 ### (Optional) Create a `config` File
 
 If you want to change the Ubuntu mirror or build a version other than **noble (24.04)**, create a file named `config` like this:
