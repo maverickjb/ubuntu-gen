@@ -2,9 +2,9 @@
 
 This is another repository that provides scripts for automatically building `rootfs.img` for the Xiaomi Pad 5 running Ubuntu.
 
-Since map220v has already created a similar project, I use his `.deb` packages for testing.
-
 This repository is based on **pi-gen**, the Raspberry Pi image building scripts.
+
+I want to thank @TheMagicMojoMan for his generous help and his hard work on this device as well.
 
 ## How to Use
 
@@ -42,3 +42,4 @@ work/ubuntu-noble-arm64/export-image/
 - [map220v/ubuntu-xiaomi-nabu](https://github.com/map220v/ubuntu-xiaomi-nabu)
 - [RPi-Distro/pi-gen: Tool used to create the official Raspberry Pi OS images](https://github.com/RPi-Distro/pi-gen)
 - [mvallim/live-custom-ubuntu-from-scratch: (Yes, the project is still alive 😃) This procedure shows how to create a bootable and installable Ubuntu Live (along with the automatic hardware detection and configuration) from scratch. A Linux to call your own.](https://github.com/mvallim/live-custom-ubuntu-from-scratch)
+- [TheMojoMan/xiaomi-nabu: Linux disk images, kernel and scripts for the Xiaomi Pad 5 tablet (codename: nabu).](https://github.com/TheMojoMan/Xiaomi-Nabu)
