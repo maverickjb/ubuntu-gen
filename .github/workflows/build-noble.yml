@@ -1,0 +1,37 @@
+name: build-noble
+
+on:
+  push:
+    branches: [ workflow-debug ]
+  pull_request:
+    branches: [ workflow-debug ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: |
+          sudo apt update && \
+          sudo apt install -y debootstrap \
+          qemu-user-static \
+          arch-test gpg
+          wget http://ftp.ubuntu.com/ubuntu/pool/universe/a/android-platform-tools/mkbootimg_34.0.5-12_all.deb && \
+          sudo dpkg -i mkbootimg_34.0.5-12_all.deb && \
+          rm mkbootimg_34.0.5-12_all.deb
+
+      - name: Build
+        run: sudo ./build.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4.0.0
+        with:
+          name: ubuntu-noble-nabu-img
+          path: |
+            work/export-image/ubuntu-noble-nabu.img
+            work/export-image/boot.img
+          compression-level: 6
