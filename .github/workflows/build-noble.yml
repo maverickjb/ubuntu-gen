@@ -23,8 +23,6 @@ jobs:
           wget http://ftp.ubuntu.com/ubuntu/pool/universe/a/android-platform-tools/mkbootimg_34.0.5-12_all.deb && \
           sudo dpkg -i mkbootimg_34.0.5-12_all.deb && \
           rm mkbootimg_34.0.5-12_all.deb
-          export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:\$PATH
-          export DEBIAN_FRONTEND=noninteractive
 
       - name: Build
         run: sudo ./build.sh
