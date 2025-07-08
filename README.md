@@ -8,6 +8,18 @@ I want to thank @TheMagicMojoMan for his generous help and his hard work on this
 
 ## How to Use
 
+### Set up the build environment on Ubuntu 24.04
+
+```
+sudo apt update && \
+sudo apt install -y debootstrap \
+    qemu-user-static \
+    arch-test gpg
+wget http://ftp.ubuntu.com/ubuntu/pool/universe/a/android-platform-tools/mkbootimg_34.0.5-12_all.deb && \
+    sudo dpkg -i mkbootimg_34.0.5-12_all.deb && \
+    rm mkbootimg_34.0.5-12_all.deb
+```
+
 ### (Optional) Create a `config` File
 
 If you want to change the Ubuntu mirror or build a version other than **noble (24.04)**, create a file named `config` like this:
