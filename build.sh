@@ -117,10 +117,10 @@ fi
 export ARCH=arm64
 export TARGET_UBUNTU_VERSION=${TARGET_UBUNTU_VERSION:-noble} # Don't forget to update stage0/prerun.sh
 export TARGET_UBUNTU_MIRROR=${TARGET_UBUNTU_MIRROR:-"http://ports.ubuntu.com/ubuntu-ports"}
-export IMG_FILENAME="${IMG_NAME:-ubuntu-$TARGET_UBUNTU_VERSION-nabu}"
+export IMG_FILENAME="ubuntu-$TARGET_UBUNTU_VERSION-nabu"
 
 export SCRIPT_DIR="${BASE_DIR}/scripts"
-export WORK_DIR="${WORK_DIR:-"${BASE_DIR}/work/${IMG_NAME}"}"
+export WORK_DIR="${WORK_DIR:-"${BASE_DIR}/work"}"
 
 export LOG_FILE="${WORK_DIR}/build.log"
 
