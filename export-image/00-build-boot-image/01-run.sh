@@ -11,7 +11,7 @@ if [[ -n "$DTB_FILE" && -n "$VMLINUZ_FILE" ]]; then
         echo "Running mkbootimg..."
         cat $VMLINUZ_FILE $DTB_FILE > "${STAGE_WORK_DIR}/zImage"
         mkbootimg --kernel "${STAGE_WORK_DIR}/zImage" \
-            --cmdline "console=tty0 root=/dev/sda33 rw rootwait fbcon=rotate:1" \
+            --cmdline "console=tty0 root=/dev/sda33 rw rootwait quiet splash" \
             --base 0x00000000 \
             --kernel_offset 0x00008000 \
             --tags_offset 0x00000100 \
